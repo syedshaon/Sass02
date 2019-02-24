@@ -7,10 +7,10 @@ main {
     .trial {
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
     }
 
     figure.photo {
+        display: table-cell;
         width: 50%-$dblGutter;
 
     }
@@ -22,6 +22,7 @@ main {
     }
 
     div.blog article {
+        display: table-cell;
         width: 50% -$dblGutter;
 
     }

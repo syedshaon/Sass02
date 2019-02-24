@@ -105,7 +105,8 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+main {
     display: block;
 }
 
@@ -156,5 +157,3 @@ html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-
