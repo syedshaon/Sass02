@@ -2,10 +2,10 @@
 @import "variables";
 @import "phone";
 
-@media only screen and (min-width:560px) {
+@media only screen and (min-width:35rem) {
     @import "tablet";
 }
 
-@media only screen and (min-width:1140px) {
+@media only screen and (min-width:60rem) {
     @import "desktop";
 }

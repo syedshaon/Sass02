@@ -1,7 +1,15 @@
 ﻿@import "variables";
 
 // nav
-
+body {
+    background-image: url(/photos//newBack.jpg);
+    background-repeat: no-repeat;
+}
+header, nav, main, footer{
+    max-width: 80rem;
+    margin: 0 auto;
+    background-color: white;
+}
 nav ul li {
     max-width: 150px;
 }

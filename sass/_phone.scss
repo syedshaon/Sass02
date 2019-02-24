@@ -9,7 +9,7 @@ body {
     font-family: $dftFontFamily;
     font-weight: $normal;
     font-size: 16px;
-    max-width: 80rem;
+    width: 100%;
     background: white;
     margin: auto;
     box-shadow: 0 0 10px black;
@@ -22,6 +22,53 @@ header {
     background-color: $primaryCol;
     color: $secondaryCol;
     padding: 1em $gutter;
+    display: flex;
+
+    .search {
+        margin-left: auto;
+        height: 30px;
+        width: 6rem;
+        background-color: $secondaryCol;
+        border: 1px solid black;
+        border-radius: 10px;
+        color: $primaryCol;
+        vertical-align: middle;
+        font-weight: $heavy;
+        transition: width .5s;
+        padding-left: 10px;
+    }
+
+    input.search:focus {
+        width: 8rem;
+    }
+
+    input.search::placeholder {
+        color: $primaryCol;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    input:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    input:focus:-moz-placeholder {
+        color: transparent;
+    }
+
+    /* FF 4-18 */
+    input:focus::-moz-placeholder {
+        color: transparent;
+    }
+
+    /* FF 19+ */
+    input:focus:-ms-input-placeholder {
+        color: transparent;
+    }
+
+    /* IE 10+ */
+
+
 
     h1 {
         font-size: 2rem;
@@ -106,6 +153,7 @@ main {
         line-height: 130%;
         color: $primaryCol;
     }
+ 
 
     figure.banner {
         width: 100%;
@@ -138,6 +186,39 @@ main {
         border: none;
     }
 }
+
+
+div.pop {
+    background-color: $accent;
+    text-align: center;
+    padding: 1rem 0; 
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+        font-weight: $heavy;
+    }
+
+    .copy {
+        padding: .5rem 0;
+
+        .copy span {
+            font-size: 3rem;
+            color: $primaryCol;
+            font-weight: $heavy;
+        }
+    }
+}
+
+
+
+
+
+
+
 
 div.blog article {
     margin: .5rem $gutter;
