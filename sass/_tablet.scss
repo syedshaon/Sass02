@@ -1,43 +1,30 @@
 ﻿@import "variables";
 
-header .logo img {
-    width: auto;
-}
 
-header .social {
-    position: relative;
-    float: right;
-}
 
-// Columns
+// / /---------- Main Style------------------
 main {
-    .width6 {
-        float: left;
-        width: 50%;
+    .trial {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
     }
-}
 
+    figure.photo {
+        width: 50%-$dblGutter;
 
-// // // // // sub Nav
-
-.hideSmall {
-    display: inline;
-}
-
-// // // // // NewsPaper Style coluns
-
-.multicol {
-    @include columns(2, $darkgrey);
-}
-
-
-// Columns
-
-@for $i from 1 through 12 {
-    $w: ($i/12);
-
-    .large-#{$i} {
-        width: $w*100%;
-        float: left;
     }
+
+    div.blog {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    div.blog article {
+        width: 50% -$dblGutter;
+
+    }
+
+
 }

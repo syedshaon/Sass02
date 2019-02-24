@@ -1,46 +1,17 @@
 ﻿/*SCSS Color*/
-$brown:#a47027;
-$orange:#ecbc4d;
-$blue:#a8c6ef;
-$darkgrey:#858585;
-$ltgrey:#f0f0f3;
+$primaryCol:#424e64;
+$secondaryCol:#bbc2ca;
+$fontColor:#35373a;
 
 
-$text-color: $darkgrey;
-$menu-color: $orange;
-$body-color: #fff;
-$link-color:$brown;
-$h1_color:$brown;
-$h2-color:$orange;
-$h3_color:$blue;
 
 /*Font Family*/
-$dftFontFamily: 'Quicksand',
+$dftFontFamily: 'Lato',
 sans-serif;
-$normal: 400;
+$normal: 300;
 $heavy: 700;
 
 
 /*Gutter*/
 $gutter:2%;
-
-/*-----SCSS MIXIN for MULTIPLE COLUMNS -----*/
-@mixin columns($count, $line_color) {
-    -webkit-column-count: $count;
-    /* Chrome, Safari, Opera */
-    -moz-column-count: $count;
-    /* Firefox */
-    column-count: $count;
-
-    -webkit-column-gap: $gutter;
-    /* Chrome, Safari, Opera */
-    -moz-column-gap: $gutter;
-    /* Firefox */
-    column-gap: $gutter;
-
-    -webkit-column-rule: 1px outset $line_color;
-    /* Chrome, Safari, Opera */
-    -moz-column-rule: 1px outset $line_color;
-    /* Firefox */
-    column-rule: 1px outset $line_color;
-}
+$dblGutter:$gutter*2;

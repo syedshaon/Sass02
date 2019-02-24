@@ -1,221 +1,178 @@
 ﻿@import "variables";
 
-
 html {
-    -webkit-text-size-adjust: none;
+    background-image: url(/photos/polonez_car.png);
 }
 
-* {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-
-.clearfix:after {
-    content: " ";
-    display: table;
-    clear: both;
-}
-
-// vv
-
+// ----------Overall Body  Style------------------
 body {
+    font-family: $dftFontFamily;
+    font-weight: $normal;
     font-size: 16px;
+    max-width: 80rem;
+    background: white;
+    margin: auto;
+    box-shadow: 0 0 10px black;
 }
 
-/*Header Starts Here*/
+
+
+// ----------Overall header  Style------------------
 header {
-    padding: 1em $gutter .5em $gutter;
-    border: solid 1px $ltgrey;
-
-    h1,
-    h2 {
-        display: none;
-    }
-
-    .logo {
-        float: left;
-    }
-
-    .logo img {
-        width: 200px;
-    }
-
-}
-
-/*Header Ends Here*/
-
-.social {
-    float: right;
-    padding-top: .5em;
-    z-index: 99;
-}
-
-.social li a {
-    display: block;
-    padding-left: 10px;
-}
-
-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    background-color: $menu-color;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-}
-
-/*footer */
-footer {
-    clear: both;
-    font-size: .8em;
-    text-align: center;
-    padding: 2em 0 .6em 0;
-    color: $brown;
-    font-weight: $heavy;
-
-    a {
-        color: $brown;
-    }
-
-}
-
-// // // Main Area
-
-main {
-    display: block;
-    min-height: 25em;
+    background-color: $primaryCol;
+    color: $secondaryCol;
+    padding: 1em $gutter;
 
     h1 {
-        font-size: 3em;
-        color: $h1_color;
-        padding-top: .75em;
+        font-size: 2rem;
+        font-weight: $normal;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: $heavy;
+    }
+}
+
+// ----------Overall NAV  Style------------------
+
+nav {
+    background-color: $secondaryCol;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    width: 100%;
+
+    ul {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    ul li {
+        width: 25%;
+        border-right: 1px solid rgba(0, 0, 0, .3);
+    }
+
+
+    ul li:last-child {
+        border-right: none;
+    }
+
+    ul li a {
+        display: block;
+        text-align: center;
+        font-weight: $heavy;
+        padding: .5rem 0;
+        color: $primaryCol;
+        transition: background .75s ease, color .75s ease;
+    }
+
+    ul li.active a {
+        background-color: darken($secondaryCol, 20%);
+    }
+
+
+    ul li a:hover {
+        color: $secondaryCol;
+        background-color: $primaryCol;
+    }
+}
+
+
+
+
+
+// ---------- Main  Style------------------
+main {
+    h1 {
+        font-size: 2rem;
+        margin: 1rem 0 0 $gutter;
+        color: $primaryCol;
         font-weight: $heavy;
     }
 
     h2 {
-        font-size: 2em;
-        color: $h2-color;
-        padding-top: .5em;
-        font-weight: $heavy;
-        clear: both;
+        font-size: 2rem;
+        margin: 1rem 0 0 $gutter;
+        color: lighten($primaryCol, 20%);
     }
 
     h3 {
-        font-size: 1.5em;
-        color: $h3_color;
-        padding-top: .5em;
-        font-weight: $heavy;
+        font-size: 1.5rem;
+        margin: .75rem 0 0 $gutter;
+        color: lighten($fontColor, 10%);
     }
 
     p {
-        font-size: 1em;
-        color: $text-color;
-        padding-top: .4em;
-        font-weight: $normal;
         line-height: 130%;
+        color: $primaryCol;
     }
 
-    strong {
-        font-weight: $heavy;
-    }
-
-    a {
-        color: $link-color;
-    }
-}
-
-// main area's padding for mobile
-main {
-    .row {
+    figure.banner {
         width: 100%;
-        clear: both;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
-    padding: 0 $gutter;
+    figure.photo {
+        width: 100%-$dblGutter;
+        margin: .5rem $gutter;
+        box-sizing: border-box;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            color: $primaryCol;
+            text-align: center;
+        }
+    }
+
+    hr.fadeAway {
+        background: linear-gradient(to right, rgba(66, 78, 100, 1) 0%, rgba(66, 78, 100, 0.99) 1%, rgba(32, 124, 202, 0.5) 50%, rgba(66, 78, 100, 0) 100%);
+        height: 3px;
+        border: none;
+    }
 }
 
-// Sub Nav
-%subnav {
-    display: block;
-    float: left;
-    width: 25%;
-    margin: 2em 0 0 0;
-    padding: .5em 1em .2em 1em;
-    color: $darkgrey;
-    border: solid 1px $orange;
-    text-decoration: none;
-    border-radius: 10px 10px 0 0;
-    transition: background ease .5s;
-}
+div.blog article {
+    margin: .5rem $gutter;
+    width: 100% -$dblGutter;
 
-.subnav-link {
-    @extend %subnav;
-    background-color: $ltgrey;
-}
-
-.subnav-link:hover {
-    background-color: $orange;
-}
-
-.subnav-active {
-    @extend %subnav;
-    background-color: $blue;
-    font-weight: $heavy;
-    color: #111;
-}
-
-.hideSmall {
-    display: none;
 }
 
 
-// // // // // lists
-
-@mixin a_list() {
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding: .5em 0 .5em 1.5em;
-    margin-left: 1em;
-}
-
-ul.list-check-yes li {
-    background-image: url(../images/check1.png);
-    @include a_list();
-}
-
-ul.list-check-no li {
-
-    background-image: url(../images/check2.png);
-    @include a_list();
-}
-
-ul.list-check-yes,
-ul.list-check-no {
-    padding-top: .5em;
-}
 
 
-// Columns
 
-@for $i from 1 through 12 {
-    $w: ($i/12);
 
-    .small-#{$i} {
-        width: $w*100%;
-        padding-left: $gutter*1.5;
-        float: left;
+
+// ---------- Footer Style------------------
+footer {
+    width: 100%;
+    background: $primaryCol;
+
+    p {
+        text-align: center;
+        color: $secondaryCol;
+        padding: .75rem;
+        font-size: .75rem;
+
+        a {
+            color: $secondaryCol;
+        }
     }
 }
 
 
+// Clearfix : force an element not to collapse
 
-// imgaes
-
-img.triangle {
-    float: left;
-    shape-outside: polygon(0 0, 100% 0, 0 100%);
-    -webkit-shape-outside: polygon(0 0, 100% 0, 0 100%);
-    margin: 10px 20px 20px 0;
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }

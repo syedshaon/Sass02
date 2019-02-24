@@ -1,15 +1,11 @@
-﻿
-@import "reset";
+﻿@import "reset";
 @import "variables";
 @import "phone";
 
-@media only screen and (min-width:45em) {
+@media only screen and (min-width:560px) {
     @import "tablet";
 }
 
-@media only screen and (min-width:64.25em) {
+@media only screen and (min-width:1140px) {
     @import "desktop";
 }
-
-@import "mobilemenu";
-
