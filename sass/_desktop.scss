@@ -2,7 +2,7 @@
 
 // nav
 body {
-    background-image: url(/photos/newBack.jpg);
+    background-image: url(../photos/newBack.jpg);
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-position-y: 10%;
@@ -43,12 +43,12 @@ main {
         display: flex;
         flex-wrap: wrap;
 
+
     }
 
     div.blog article {
         display: table-cell;
         width: 33.33% -$dblGutter;
-
     }
 
 
