@@ -436,10 +436,10 @@ footer p a {
   /*Font Family*/
   /*Gutter*/
   body {
-    background-image: url(/photos//newBack.jpg);
+    background-image: url(/photos/newBack.jpg);
     background-repeat: no-repeat;
-    background-position-y: 25%;
     background-position-x: 50%;
+    background-position-y: 10%;
   }
   header,
   nav,
